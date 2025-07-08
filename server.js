@@ -17,6 +17,8 @@ const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
 const outputDir = "clips";
 if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir);
+app.use("/clips", express.static("clips"));
+
 
 app.post("/api/transcribe", upload.single("video"), async (req, res) => {
   const videoPath = req.file.path;
