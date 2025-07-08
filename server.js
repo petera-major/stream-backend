@@ -1,11 +1,11 @@
-import express from "express";
-import cors from "cors";
-import multer from "multer";
-import { OpenAI } from "openai";
-import dotenv from "dotenv";
-import fs from "fs";
-import ffmpeg from "fluent-ffmpeg";
-import path from "path";
+const express = require("express");
+const cors = require("cors");
+const multer = require("multer");
+const { OpenAI } = require("openai");
+const dotenv = require("dotenv");
+const fs = require("fs");
+const ffmpeg = require("fluent-ffmpeg");
+const path = require("path");
 
 dotenv.config();
 const app = express();
